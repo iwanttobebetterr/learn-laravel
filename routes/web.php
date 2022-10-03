@@ -13,4 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\UsersController::class,'index']);
+Route::get('/', [\App\Http\Controllers\UsersController::class, 'index']);
+
+Route::get('/features', [\App\Http\Controllers\FeaturesController::class, 'index']);
+Route::get('/features/{feature}', [\App\Http\Controllers\FeaturesController::class, 'show'])->name('features.show');
